@@ -1,5 +1,6 @@
 body {
 	-webkit-font-smoothing: antialiased;
+	margin: 0px;
 }
 .main {
 	position: absolute;
@@ -22,7 +23,6 @@ body {
 	display: inline-block;
 	background-color: rgba(251, 74, 74, 0.2);
 	text-align: left;
-	width: 50%;
 	height: 100vh;
 }
 
@@ -34,7 +34,6 @@ body {
 	display: inline-block;
 	background-color: rgba(211, 211, 211, 0.2);
 	text-align: right;
-	width: 49%;
 	height: 100vh;
 }
 
@@ -46,10 +45,16 @@ body {
 // .player_wrap.selected{
 //     // box-shadow: 2px 2px 5px 0px black;
 // }
-
+.player_wrap {
+	font-family: sans-serif;
+	width: 50%;
+}
 .player_header {
 	font-size: 30px;
-    font-family: sans-serif;
+}
+.player_header,
+.stats {
+	padding: 5px;
 }
 .selected .player_header {
 	font-weight: 800;
@@ -100,6 +105,7 @@ button.reset {
 	position: absolute;
    	margin-left: auto;
 	margin-right: auto;
+	font-size: small;
 	left: 0;
 	right: 0;
     top: 5px;
