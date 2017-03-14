@@ -9,7 +9,7 @@ var game = {
 		this.desired_state = tile.state;
 		// The magic must happen here...
 		this.check_horizontal_win();
-		this.check_vertical_win()
+		this.check_vertical_win();
 	},
 	check_horizontal_win: function() {
 		if(this.left_steps  + this.right_steps - 1 === 4) {
@@ -65,6 +65,7 @@ var game = {
 	},
 	generate_new_board: function() {
 		$('.main').empty();
+		game.is_over = false;
 		// Generate a matrix of tile objects and assign their jquery selector for onclick functions;
 		this.board = [];
 		for (var i = 0; i <= 6; i++) {

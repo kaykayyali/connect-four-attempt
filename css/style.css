@@ -2,35 +2,54 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 .main {
+	position: absolute;
+	top: 100px;
+	border-radius: 10px;
 	margin-left: auto;
 	margin-right: auto;
 	height: 425px;
 	width: 500px;
-	background-color: lightblue;
-	position: relative;
+	background-color: #d1d4d5;
 	padding: 5px;
+	box-shadow: inset 0px 0px 2px black, 0px 0px 1px 1px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
 }
 
 #player_one_wrap {
-	position: absolute;
-	top: 0;
-    left: 5%;
+	display: inline-block;
+	background-color: rgba(251, 74, 74, 0.2);
+	text-align: left;
+	width: 50%;
+	height: 100vh;
+}
+
+#player_one_wrap.selected {
+		background-color: rgba(251, 74, 74, 0.6);
 }
 
 #player_two_wrap {
-	position: absolute;
-	top: 0;
-    right: 5%;
+	display: inline-block;
+	background-color: rgba(211, 211, 211, 0.2);
+	text-align: right;
+	width: 49%;
+	height: 100vh;
 }
 
-.player_wrap.selected{
-    box-shadow: 2px 2px 5px 0px black;
+#player_two_wrap.selected {
+		background-color: rgba(166, 166, 166, 0.9);
+
 }
+
+// .player_wrap.selected{
+//     // box-shadow: 2px 2px 5px 0px black;
+// }
 
 .player_header {
 	font-size: 30px;
     font-family: sans-serif;
-    text-align: center;
 }
 .selected .player_header {
 	font-weight: 800;
@@ -40,26 +59,50 @@ body {
     display: inline-block;
 }
 .tile {
+	background-color: white;
 	display: inline-block;
     width: 59px;
     height: 59px;
     border: solid 1px black;
     border-radius: 50%;
     margin: 5px;
-    opacity: .7;
-}
-
-.tile.red {
-	background-color: red;
-}
-.tile.black {
-	background-color: black;
+    opacity: .9;
+    position: relative;
 }
 .tile:hover {
 	opacity: 1;
 }
+
+.tile.red:after,
+.tile.black:after {
+	content: '';
+    height: 15px;
+    background-color: white;
+    width: 15px;
+    position: absolute;
+    top: 22px;
+    opacity: 0.1;
+    left: 22px;
+    border-radius: 20px;
+}
+
+.tile.red {
+	background-color: #fb4a4a;
+	box-shadow: inset 0 0 6px 1px black;
+}
+
+.tile.black {
+	background-color: black;
+	box-shadow: inset 0 0 6px 1px #7c7c7c;
+}
+
 button.reset {
-	display: inherit;
-	margin-left: auto;
+	display: block;
+	position: absolute;
+   	margin-left: auto;
 	margin-right: auto;
+	left: 0;
+	right: 0;
+    top: 5px;
+    width: 55px;
 }
