@@ -29,5 +29,10 @@ Row.prototype.select = function() {
 			break;
 		}
 	}
-	last_unselected_tile.select();
+	if (last_unselected_tile) {
+		last_unselected_tile.select();
+	}
+	else {
+		console.log("No more tiles in this row.");
+	}
 };
