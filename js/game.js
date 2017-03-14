@@ -64,6 +64,7 @@ var game = {
 		}
 	},
 	generate_new_board: function() {
+		$('.main').empty();
 		// Generate a matrix of tile objects and assign their jquery selector for onclick functions;
 		this.board = [];
 		for (var i = 0; i <= 6; i++) {

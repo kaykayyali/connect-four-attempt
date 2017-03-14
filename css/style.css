@@ -23,6 +23,10 @@ body {
     right: 5%;
 }
 
+.player_wrap.selected{
+    box-shadow: 2px 2px 5px 0px black;
+}
+
 .player_header {
 	font-size: 30px;
     font-family: sans-serif;
@@ -53,4 +57,9 @@ body {
 }
 .tile:hover {
 	opacity: 1;
+}
+button.reset {
+	display: inherit;
+	margin-left: auto;
+	margin-right: auto;
 }
